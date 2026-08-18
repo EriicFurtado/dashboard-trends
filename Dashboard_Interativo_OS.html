@@ -246,51 +246,30 @@
   </div>
   <div class="kpis" id="pKpis"></div>
   <p class="note">★ OS com <strong>Ocorrência = Projeto Padrão</strong>. “Dias até conclusão” = diferença entre a data de hoje e a <strong>Prev. Término</strong> da OS. Quando a previsão já passou, aparece <strong>Atrasado</strong>.</p>
-  <div class="table-card">
-    <h3><span>Lista de Projetos (Projeto Padrão)</span>
-      <div class="tabs">
-        <button class="tab active" data-view="all" onclick="setPView(this)">Todos</button>
-        <button class="tab" data-view="abertas" onclick="setPView(this)">Em Aberto</button>
-        <button class="tab" data-view="atrasados" onclick="setPView(this)">Atrasados</button>
-        <button class="tab" data-view="finalizadas" onclick="setPView(this)">Finalizados</button>
+  <section class="project-gantt-card" aria-label="Cronograma Gantt dos projetos ativos">
+    <div class="project-gantt-heading">
+      <div>
+        <span class="project-gantt-eyebrow">CRONOGRAMA OPERACIONAL</span>
+        <h3>Projetos ativos</h3>
+        <p>Expanda cliente, serviço e etapa para visualizar as tarefas e seus prazos.</p>
       </div>
-    </h3>
-    <div class="table-wrap"><table><thead><tr>
-      <th class="sticky-col" onclick="sortP('cliente')">Cliente</th>
-      <th onclick="sortP('os')">OS</th>
-      <th onclick="sortP('status')">Status</th>
-      <th onclick="sortP('prazo')">Prazo</th>
-      <th onclick="sortP('tipoServico')">Tipo serviço</th>
-      <th onclick="sortP('cadastro')">Cadastro</th>
-      <th onclick="sortP('prevInicio')">Prev. Início</th>
-      <th onclick="sortP('prevTermino')">Prev. Término</th>
-      <th onclick="sortP('diasAte')">Dias até conclusão</th>
-      <th onclick="sortP('dias')">Dias desde cadastro</th>
-      <th>Tarefas</th>
-      <th>Tarefas finalizadas</th>
-      <th>% conclusão tarefas</th>
-    </tr></thead><tbody id="pBody"></tbody></table></div>
-  </div>
-  <div class="charts">
-    <div class="chart-card"><h3>Status dos Projetos</h3><canvas id="cProjStatus"></canvas></div>
-    <div class="chart-card"><h3>Situação do prazo (projetos em aberto)</h3><canvas id="cProjSit"></canvas></div>
-    <div class="chart-card"><h3>Prazo (crítico / alto)</h3><canvas id="cProjPrazo"></canvas></div>
-    <div class="chart-card"><h3>Tipo de serviço</h3><canvas id="cProjTipo"></canvas></div>
-    <div class="chart-card"><h3>Cadastros por mês</h3><canvas id="cProjTemporal"></canvas></div>
-    <div class="chart-card"><h3>Distribuição por cliente</h3><canvas id="cProjCli"></canvas></div>
-    <div class="chart-card full"><h3>Linha do tempo — dias até a previsão de conclusão</h3><canvas id="cProjDias"></canvas></div>
-    <div class="chart-card full"><h3>Evolução de tarefas finalizadas × técnico</h3><canvas id="cProjTasksMes"></canvas></div>
-  </div>
-  <div class="table-card">
-    <h3>Top 5 localidades — Projetos</h3>
-    <p class="note">Ranking por bairro com base no endereço de atendimento das OS com ocorrência Projeto Padrão (clientes Teste excluídos).</p>
-    <div class="table-wrap" style="max-height:360px">
-      <table>
-        <thead><tr><th>#</th><th>Localidade (bairro)</th><th>Qtd OS</th><th>% do total Projetos c/ endereço</th></tr></thead>
-        <tbody id="pLocBody"></tbody>
-      </table>
+      <div class="project-gantt-actions">
+        <div class="gantt-scale-control" aria-label="Escala do cronograma">
+          <span>Visualização</span>
+          <button type="button" class="active" data-gantt-scale="month" onclick="setGanttScale(this)">Mês</button>
+          <button type="button" data-gantt-scale="week" onclick="setGanttScale(this)">Semana</button>
+          <button type="button" data-gantt-scale="day" onclick="setGanttScale(this)">Dia</button>
+        </div>
+        <div class="project-gantt-legend" aria-label="Legenda do Gantt">
+          <span><i class="gantt-dot planned"></i>Planejado</span>
+          <span><i class="gantt-dot progress"></i>Em andamento</span>
+          <span><i class="gantt-dot done"></i>Finalizado</span>
+          <span><i class="gantt-dot late"></i>Atrasado</span>
+        </div>
+      </div>
     </div>
-  </div>
+    <div id="projectGantt" class="project-gantt"></div>
+  </section>
 </div>
 
 
