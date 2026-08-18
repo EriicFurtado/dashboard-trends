@@ -9,10 +9,10 @@
  *   5. Painel Tarefas:       initTasks / applyTasks / renderTasks / renderTTable
  *   6. Painel Serviços FAST: initFast / applyFast / renderFast / renderFTable
  *   7. Painel Projetos:      initProj / applyProj / renderProj / renderPTable
- *   8. Filtros, exportação CSV e ranking de localidades (fim do arquivo)
+ *   8. Filtros, exportação XLSX e ranking de localidades (fim do arquivo)
  *
- * Depende de: Chart.js (carregado via CDN no index.html) e dos elementos
- * DOM definidos em index.html. Estilos em styles.css.
+ * Depende de: Chart.js e SheetJS/XLSX (carregados via CDN no HTML) e dos elementos
+ * DOM definidos no HTML. Estilos em styles.css.
  * ============================================================================ */
 
 /* Estilo global estilo BI */
@@ -1272,22 +1272,91 @@ function resetCurrentFilters() {
     applyProj();
   }
 }
-function exportCurrentCSV() {
-  let headers, rows, name;
-  if(currentPanel==='os'){
-    const data=getOsTableData();
-    headers=['Cliente','OS','Status','Prazo','Tipo','Cadastro','Prev.Término','Dias'];
-    rows=data.map(d=>[`"${d.cliente}"`,d.os,d.status,d.prazo,`"${d.ocorrencia}"`,d.cadastro,d.prevTermino,d.dias].join(','));
-    name='os_filtradas.csv';
-  } else {
-    const data=getTTableData();
-    headers=['Cliente','ID','OS','Status','Responsável','Auxiliares','Tarefa','Prevista','Início','Fim'];
-    rows=data.map(d=>[`"${d.cliente}"`,d.id,d.os,d.status,d.tecnico,`"${(d.auxiliares||[]).join('; ')}"`,`"${d.nome}"`,d.prevista,d.inicio,d.fim].join(','));
-    name='tarefas_filtradas.csv';
+function exportCurrentXLSX() {
+  if (typeof XLSX === 'undefined') {
+    alert('Biblioteca XLSX não carregada. Verifique o script SheetJS no HTML.');
+    return;
   }
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob(['\ufeff'+[headers.join(','),...rows].join('\n')],{type:'text/csv;charset=utf-8;'}));
-  a.download=name; a.click();
+  let sheetData, sheetName, fileName;
+  if (currentPanel === 'os') {
+    const data = getOsTableData();
+    sheetData = data.map(d => ({
+      'Cliente': d.cliente,
+      'OS': d.os,
+      'Status': d.status,
+      'Prazo': d.prazo,
+      'Tipo': d.ocorrencia,
+      'Cadastro': d.cadastro,
+      'Prev. Término': d.prevTermino,
+      'Dias': d.dias
+    }));
+    sheetName = 'OS';
+    fileName = 'os_filtradas.xlsx';
+  } else if (currentPanel === 'tarefas') {
+    const data = getTTableData();
+    sheetData = data.map(d => ({
+      'Cliente': d.cliente,
+      'ID': d.id,
+      'OS': d.os,
+      'Status': d.status,
+      'Responsável': d.tecnico || '',
+      'Auxiliares': (d.auxiliares || []).join('; '),
+      'Tarefa': d.nome,
+      'Prevista': d.prevista,
+      'Início': d.inicio,
+      'Fim': d.fim
+    }));
+    sheetName = 'Tarefas';
+    fileName = 'tarefas_filtradas.xlsx';
+  } else if (currentPanel === 'fast') {
+    const data = getFTableData();
+    sheetData = data.map(d => {
+      const ts = typeof tasksForOs === 'function' ? tasksForOs(d.os) : [];
+      const avg = typeof avgTaskMinForOs === 'function' ? avgTaskMinForOs(d.os) : null;
+      return {
+        'Cliente': d.cliente,
+        'OS': d.os,
+        'Status': d.status,
+        'Prazo': d.prazo,
+        'Ocorrência': d.ocorrencia,
+        'Cadastro': d.cadastro,
+        'Prev. Término': d.prevTermino,
+        'Dias': d.dias,
+        'Tarefas': ts.length,
+        'Tempo médio tarefas (min)': avg != null ? Math.round(avg) : ''
+      };
+    });
+    sheetName = 'FAST';
+    fileName = 'fast_filtradas.xlsx';
+  } else if (currentPanel === 'projetos') {
+    const data = getPTableData();
+    sheetData = data.map(d => {
+      const st = typeof tasksStatsOs === 'function' ? tasksStatsOs(d.os) : { total: 0, fin: 0, pct: null };
+      return {
+        'Cliente': d.cliente,
+        'OS': d.os,
+        'Status': d.status,
+        'Prazo': d.prazo,
+        'Tipo serviço': d.tipoServico || '',
+        'Cadastro': d.cadastro,
+        'Prev. Início': d.prevInicio,
+        'Prev. Término': d.prevTermino,
+        'Dias até conclusão': d.diasAte,
+        'Dias desde cadastro': d.dias,
+        'Tarefas': st.total,
+        'Tarefas finalizadas': st.fin,
+        '% conclusão tarefas': st.pct != null ? Math.round(st.pct) : ''
+      };
+    });
+    sheetName = 'Projetos';
+    fileName = 'projetos_filtrados.xlsx';
+  } else {
+    return;
+  }
+  const ws = XLSX.utils.json_to_sheet(sheetData);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, sheetName);
+  XLSX.writeFile(wb, fileName);
 }
 
 

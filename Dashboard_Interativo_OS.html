@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard OS + Tarefas — Trends Automation</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
   </div>
   <div class="header-right">
     <button class="btn btn-ghost" onclick="resetCurrentFilters()">Limpar Filtros</button>
-    <button class="btn btn-primary" onclick="exportCurrentCSV()">Exportar CSV</button>
+    <button class="btn btn-primary" onclick="exportCurrentXLSX()">Exportar XLSX</button>
   </div>
 </div>
 <div class="main-tabs">
