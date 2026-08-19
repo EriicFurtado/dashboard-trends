@@ -22,4 +22,4 @@ git commit -m "descrição das modificações"
 git push
 ```
 5. Pagar um Monster para o Luís 
-6. Pagar dois Monstar para o Eric
+6. Pagar dois Monster para o Eric
