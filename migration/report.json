@@ -1,0 +1,4335 @@
+{
+  "generatedAt": "2026-08-20T15:16:29.947Z",
+  "source": "script.js",
+  "dryRun": false,
+  "validation": {
+    "clients": 136,
+    "serviceOrders": 392,
+    "tasks": 576,
+    "orphanTasks": 0,
+    "ordersWithoutTasks": 189,
+    "classifiedTasks": 99,
+    "unclassifiedTasks": 477,
+    "serviceOrdersWithoutClient": 0,
+    "tasksWithoutServiceOrderId": 0,
+    "tasksWithoutClient": 0,
+    "taskClientMismatches": 0,
+    "duplicateServiceOrderIds": [],
+    "duplicateTaskIds": [],
+    "missingServiceOrderIds": 0,
+    "missingTaskIds": 0,
+    "emptyTaskNames": 0,
+    "emptyServiceOrderStatuses": 0,
+    "emptyTaskStatuses": 0
+  },
+  "remoteValidation": {
+    "clients": 136,
+    "serviceOrders": 392,
+    "tasks": 576,
+    "orphanTasks": 0,
+    "ordersWithoutTasks": 189,
+    "classifiedTasks": 99,
+    "unclassifiedTasks": 477,
+    "migrationIssues": 477
+  },
+  "issueSummary": {
+    "INVALID_TITLE_FORMAT": 329,
+    "UNKNOWN_STAGE": 134,
+    "UNKNOWN_TYPE_CODE": 14
+  },
+  "issues": [
+    {
+      "entity_type": "task",
+      "external_id": "113",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração Wifeed",
+        "serviceOrderExternalId": 158
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "3",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação da Infraestrutura",
+        "serviceOrderExternalId": 3
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "171",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 181
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "175",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 182
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "197",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos e passagem de cabos.",
+        "serviceOrderExternalId": 182
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "232",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 183
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "366",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para sistema de som",
+        "serviceOrderExternalId": 392
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "501",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|CONFIGURAÇÃO|Manutenção corretiva do receiver",
+        "serviceOrderExternalId": 449
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "515",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|CONFIGURAÇÃO|Testes de produto para acionamento de garantia.",
+        "serviceOrderExternalId": 451
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "662",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|CONFIGURAÇÃO|Testes em bancada de equipamento que retornou da garantia ",
+        "serviceOrderExternalId": 459
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "58",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 63
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "78",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de equipamentos",
+        "serviceOrderExternalId": 99
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "107",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de infraestrutura para movimentação de câmera",
+        "serviceOrderExternalId": 147
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "264",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Revisão de automação e fixação de câmera",
+        "serviceOrderExternalId": 317
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "497",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|CONFIGURAÇÃO|Reconfiguração de Equipamento de Audio",
+        "serviceOrderExternalId": 446
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "4",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Diagrama elétrico",
+        "serviceOrderExternalId": 4
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "19",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Correção de projeto",
+        "serviceOrderExternalId": 4
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "166",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 177
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "65",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 85
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "71",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem e configuração de equipamentos",
+        "serviceOrderExternalId": 95
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "90",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de infraestrutura e passagem de cabos.",
+        "serviceOrderExternalId": 85
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "95",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Posicionamento de câmeras",
+        "serviceOrderExternalId": 129
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "103",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 95
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "165",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Serviço em garantia.",
+        "serviceOrderExternalId": 180
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "260",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Resolver problema de câmera fora do DVR",
+        "serviceOrderExternalId": 315
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "277",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar camera fora do DVR",
+        "serviceOrderExternalId": 332
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "373",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração da Automação dos interruptores",
+        "serviceOrderExternalId": 402
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "370",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita para alinhamento do sistema de automação ",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "418",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "496",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AAT|CONFIGURAÇÃO|Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "517",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Criação de manual do cliente",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "518",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Criação de planilha de nome e função do dispositivos",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "645",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Atualização da planilha de nome e função dos dispositivos ",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "649",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Atualização de manual do cliente",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "661",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Ajustes finais e entrega do sistema de automação",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "676",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita técnica",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "680",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "AUT|INSTALAÇÃOInstalação dos Interruptores Nova Digital",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "681",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "AAV|INFRAESTRUTURAIRealocar os cabos da caixa de som",
+        "serviceOrderExternalId": 271
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "263",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "266",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|INFRAESTRURA|Passagem dos cabos de som",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "386",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Entrega de projeto executivo",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "387",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Entrega de diagramas de automação, áudio e vídeo, redes e segurança eletrônica",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "400",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "AUT|INSTALAÇÃOInstalação de interruptores",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "419",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "427",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Configuração de dispositivos de rede ",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "465",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Configuração de dispositivos de rede ",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "519",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Acompanhamento de instalação da televisão e internet",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "586",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica ",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "590",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Estudo de caso de automatização do ar condicionado",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "632",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONIFGURAÇÃO|Entrega de projeto, ajuste finos e revisão geral dos sistemas",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "637",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Revisão dos diagramas de automação",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "638",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Criação de planilha com nome e função dos dispositivos de automação",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "640",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Criação de manual do cliente",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "641",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Montagem da placa para teste de automação em ar condicionado",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "658",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Cliente precisando reiniciar o modem ",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "718",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Criação da arte com os comandos de voz da Alexa",
+        "serviceOrderExternalId": 297
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "9",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Troca do interruptor",
+        "serviceOrderExternalId": 17
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "10",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Verificar TV da Suíte ",
+        "serviceOrderExternalId": 17
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "17",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Manutenção Interruptor",
+        "serviceOrderExternalId": 26
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "80",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 120
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "89",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Manutenção corretiva de equipamentos. ",
+        "serviceOrderExternalId": 120
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "161",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 176
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "242",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 255
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "274",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Devolução e instalação de Subwoofer em garantia",
+        "serviceOrderExternalId": 330
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "305",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para checkup do sistema de redes",
+        "serviceOrderExternalId": 347
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "335",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Substituição de Nobreak",
+        "serviceOrderExternalId": 365
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "343",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Correção e ajuste de câmera fora do DVR",
+        "serviceOrderExternalId": 365
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "356",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Solucionar módulos de cortina e blackout do sótão que estão offline",
+        "serviceOrderExternalId": 384
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "451",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Investigação de ar condicionado que desliga sozinho",
+        "serviceOrderExternalId": 417
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "452",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|CONFIGURAÇÃO|Remoção de senhas antigas e criação de novas senhas de controle de acesso de funcionários",
+        "serviceOrderExternalId": 417
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "504",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Correção no modulo da cortina off-line",
+        "serviceOrderExternalId": 417
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "509",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "REDES|INSTALAÇÃO|Instalação da UCG, Interruptor closet e Revisão do Som da área externa",
+        "serviceOrderExternalId": 417
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "668",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|INSTALÇÃO|Instalação de tela interna de vídeo porteiro ",
+        "serviceOrderExternalId": 467
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "715",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|CONFIGURAÇÃO|Configuração de vídeo porteiro",
+        "serviceOrderExternalId": 477
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "116",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Orçamento Rio sul",
+        "serviceOrderExternalId": 159
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "117",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Orçamento NY",
+        "serviceOrderExternalId": 159
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "142",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento",
+        "serviceOrderExternalId": 170
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "249",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Análise do sistema de som",
+        "serviceOrderExternalId": 280
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "268",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento",
+        "serviceOrderExternalId": 324
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "284",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Recuperação Lógica",
+        "serviceOrderExternalId": 336
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "285",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do Rack",
+        "serviceOrderExternalId": 336
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "286",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Recuperação Lógica",
+        "serviceOrderExternalId": 337
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "287",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do Rack",
+        "serviceOrderExternalId": 337
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "292",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Recuperação Lógica",
+        "serviceOrderExternalId": 342
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "293",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do Rack",
+        "serviceOrderExternalId": 342
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "295",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Recuperação Lógica",
+        "serviceOrderExternalId": 343
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "296",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do Rack",
+        "serviceOrderExternalId": 343
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "298",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Manutenção do conector RJ45",
+        "serviceOrderExternalId": 345
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "307",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Solucionar problema de computado que não liga",
+        "serviceOrderExternalId": 348
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "312",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do rack de redes",
+        "serviceOrderExternalId": 351
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "339",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do Rack",
+        "serviceOrderExternalId": 337
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "340",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do Rack",
+        "serviceOrderExternalId": 342
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "361",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Recuperação Lógica",
+        "serviceOrderExternalId": 386
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "362",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização do rack de redes",
+        "serviceOrderExternalId": 386
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "371",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar câmeras offline",
+        "serviceOrderExternalId": 382
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "486",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de Câmeras e DVR",
+        "serviceOrderExternalId": 345
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "551",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Análise de Redes para Orçamento",
+        "serviceOrderExternalId": 453
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "570",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Access point ",
+        "serviceOrderExternalId": 460
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "38",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de infraestrutura ",
+        "serviceOrderExternalId": 45
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "59",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Correção de comando de ar condicionado.",
+        "serviceOrderExternalId": 65
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "265",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de interruptores",
+        "serviceOrderExternalId": 303
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "11",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento",
+        "serviceOrderExternalId": 16
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "20",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação Fechadura",
+        "serviceOrderExternalId": 16
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "254",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento com possibilidade de execução do serviço na hora",
+        "serviceOrderExternalId": 287
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "63",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação",
+        "serviceOrderExternalId": 77
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "54",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 2
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "306",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para análise da obra e programação de retomada do serviço.",
+        "serviceOrderExternalId": 12
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "12",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Manutenção Corretiva",
+        "serviceOrderExternalId": 18
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "303",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Troca de HD em um NVR",
+        "serviceOrderExternalId": 346
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "43",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 55
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "172",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos.",
+        "serviceOrderExternalId": 187
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "225",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos.",
+        "serviceOrderExternalId": 187
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "250",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Troca do módulo de automação",
+        "serviceOrderExternalId": 252
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "368",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para solucionar painel de automação offline, revisão da iluminação do jardim e orçamento para CFTV",
+        "serviceOrderExternalId": 397
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "498",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Reparo do sistema de CFTV",
+        "serviceOrderExternalId": 432
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "525",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Reparo do sistema de CFTV",
+        "serviceOrderExternalId": 432
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "635",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "SEG|INSTALAÇÃOTroca de camera e conectores BNC.",
+        "serviceOrderExternalId": 458
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "262",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "348",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "REDES|INSTALAÇÃO|Instalação do rack de  redes",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "382",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Entrega de projeto executivo",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "383",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Entrega de Manual do cliente",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "384",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Entrega de diagramas de automação, áudio e vídeo, redes e segurança eletrônica",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "397",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "REDES|CONFIGURAÇÃO|Configuração de dispositivos de rede ",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "420",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "462",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Entrega de projeto executivo",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "472",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Entrega de planilha com nome e função dos dispositivos de automação",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "507",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita Técnica",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "533",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita Técnica",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "542",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Alteração de projeto de automação",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "578",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita técnica",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "599",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "652",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Atualização do projeto de automação",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "653",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Atualização do projeto de seg. eletrônica ",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "704",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AAC|INSTALAÇÃO|Instalação das caixas de som",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "713",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO| Atualização das plantas do projeto de segurança eletrônica",
+        "serviceOrderExternalId": 306
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "453",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Confecção das plantas de automação na primeira versão",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "473",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|INFRAESTURA|Validação de estudo de redes",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "482",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita técnica para definição de infraestrutura do projeto",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "511",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita técnica para definição de infraestrutura do projeto",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "512",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Criação de layout de equipamentos de som do Home cinema",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "513",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Criação de layout de equipamentos de som da área externa",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "516",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|Confecção das plantas de redes na primeira versão",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "532",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Confecção das plantas de áudio e vídeo na primeira versão",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "535",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Confecção das plantas de segurança eletrônica na primeira versão",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "541",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Reunião de alihamento do projeto",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "543",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Criação do layout do nicho para os equipamentos de som ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "544",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Correção das plantas do projeto de som ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "545",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Correção das plantas do projeto de segurança eletrônica",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "546",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|Correção das plantas do projeto de redes",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "547",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Correção das plantas do projeto de automação",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "556",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Confecção dos diagramas do projeto de áudio e vídeo",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "564",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Confecção dos diagramas do projeto de automação do primeiro andar",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "565",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Confecção dos diagramas do projeto de automação do segundo e terceiro andar",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "566",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Levantamento de material ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "572",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|Confecção dos diagramas de redes em primeira versão ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "573",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Adicção de diagramas de automação",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "577",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Confecção dos diagramas de segurança eletronica em primeira versão ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "580",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Alteração de projeto de segurança eletrônica",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "581",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|Confecção dos Layout organizacional de dispositivos do rack ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "587",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|Alteração de layout do rack do 3º andar",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "592",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Criação de planilha com nome e função dos dispositivos de automação",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "609",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para verficação da obra para revisão de projeto ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "611",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|Revisão do projeto de redes",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "613",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Revisão do projeto de segurança eletrônica",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "614",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Revisão do projeto de áudio e vídeo",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "626",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO| Layout dos equipamentos da caixa vdi do primeiro e segundo andar ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "627",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|estudo e analise de cobertura de sinal do sistema de wifi com entrega de relatório técnico",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "642",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Atualização do projeto de segurança eletrônica",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "643",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Atualização dos diagramas de segurança eletrônica",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "655",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Atualização do projeto de automação com adição de dispositivos ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "659",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Atualização do dos diagramas de automação com adição de dispositivos ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "664",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Atualização das cotas dos dispositivos de automação  do teto ",
+        "serviceOrderExternalId": 434
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "199",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "200",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "201",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Programação e/ou Configuração",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "202",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de Acompanhamento",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "203",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Validação da Sistema",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "204",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega Técnica",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "205",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento",
+        "serviceOrderExternalId": 216
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "206",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 216
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "207",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Programação e/ou Configuração",
+        "serviceOrderExternalId": 216
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "208",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de Acompanhamento",
+        "serviceOrderExternalId": 216
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "209",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Validação da Sistema",
+        "serviceOrderExternalId": 216
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "210",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega Técnica",
+        "serviceOrderExternalId": 216
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "252",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação - Redes",
+        "serviceOrderExternalId": 281
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "270",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização e montgem do rack de redes",
+        "serviceOrderExternalId": 281
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "290",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Devolução de Alexa",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "352",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração da redes e recolocação de dispositivos na automação",
+        "serviceOrderExternalId": 215
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "503",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "REDES|CONFIGURAÇÃO|Implantação do sistema Wifeed",
+        "serviceOrderExternalId": 444
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "612",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Acesso remoto para desativação de uma das redes",
+        "serviceOrderExternalId": 468
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "233",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Suporte Online",
+        "serviceOrderExternalId": 233
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "129",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Serviço em garantia.",
+        "serviceOrderExternalId": 161
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "403",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos ",
+        "serviceOrderExternalId": 414
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "416",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 414
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "422",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 414
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "423",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 414
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "433",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de sistema de áudio e vídeo",
+        "serviceOrderExternalId": 414
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "440",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega do Serviço completo e treinamento",
+        "serviceOrderExternalId": 414
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "81",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de infraestrutura e passagem de cabos.",
+        "serviceOrderExternalId": 118
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "99",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de configuração de equipamentos",
+        "serviceOrderExternalId": 119
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "100",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de configuração de equipamentos",
+        "serviceOrderExternalId": 118
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "108",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Serviço em garantia.",
+        "serviceOrderExternalId": 152
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "219",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de Infraestrutura",
+        "serviceOrderExternalId": 223
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "220",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento Estruturado",
+        "serviceOrderExternalId": 223
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "221",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Projeto de Automação",
+        "serviceOrderExternalId": 223
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "222",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de Infraestrutura",
+        "serviceOrderExternalId": 152
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "223",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento Estruturado",
+        "serviceOrderExternalId": 152
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "224",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Projeto de Automação",
+        "serviceOrderExternalId": 152
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "244",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Separação do material",
+        "serviceOrderExternalId": 266
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "245",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem da Infraestrutura CFTV",
+        "serviceOrderExternalId": 266
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "246",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos CFTV",
+        "serviceOrderExternalId": 266
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "76",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de infraestrutura e passagem de cabos.",
+        "serviceOrderExternalId": 115
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "87",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Reposicionamento de infra estrutura",
+        "serviceOrderExternalId": 113
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "35",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Vistoria técnica ",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "110",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "231",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "288",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "388",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Readequação de projeto ",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "421",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "447",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Readequação de projeto ",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "539",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Readequação de projeto ",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "589",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Readequação de projeto ",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "603",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Readequação de projeto ",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "689",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AAV|PROJETO|Readequação de projeto de automação",
+        "serviceOrderExternalId": 44
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "337",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 350
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "358",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de interruptores que voltaram da garantia",
+        "serviceOrderExternalId": 350
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "467",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Teste de interruptor com defeito para garantia ",
+        "serviceOrderExternalId": 350
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "349",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Atendimento para sanar automação offline",
+        "serviceOrderExternalId": 371
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "57",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem e configuração de equipamentos",
+        "serviceOrderExternalId": 50
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "69",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de ALEXA",
+        "serviceOrderExternalId": 96
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "145",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 171
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "437",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 423
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "448",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "As-built de planta de automação",
+        "serviceOrderExternalId": 423
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "468",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Readequação  de manual do cliente",
+        "serviceOrderExternalId": 423
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "469",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Criação de planilha com nome e função dos dispositivos",
+        "serviceOrderExternalId": 423
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "471",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização de Layout e cards de cena no App Quero Automação ",
+        "serviceOrderExternalId": 423
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "529",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 423
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "557",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 423
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "64",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "instalar produtos",
+        "serviceOrderExternalId": 81
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "74",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem e configuração de equipamentos",
+        "serviceOrderExternalId": 83
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "75",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de senha dvr intelbras ",
+        "serviceOrderExternalId": 111
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "83",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem da Infraestrutura CFTV",
+        "serviceOrderExternalId": 80
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "84",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos CFTV",
+        "serviceOrderExternalId": 80
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "127",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "inst",
+        "serviceOrderExternalId": 160
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "137",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de televisão na parede",
+        "serviceOrderExternalId": 167
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "139",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 82
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "164",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 156
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "195",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 156
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "240",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 249
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "322",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Substituição de interruptor",
+        "serviceOrderExternalId": 357
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "367",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar interruptores que estavam offline",
+        "serviceOrderExternalId": 395
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "402",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de central de automação",
+        "serviceOrderExternalId": 416
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "639",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Configuração Remota da Impressora",
+        "serviceOrderExternalId": 471
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "474",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Correção na Automação e substituição de interruptor.",
+        "serviceOrderExternalId": 440
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "717",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Definição dos enderços de IP dos computadores e videogames da sala gamer",
+        "serviceOrderExternalId": 475
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "67",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de rede wifi e cftv",
+        "serviceOrderExternalId": 86
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "88",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de câmeras wifi",
+        "serviceOrderExternalId": 86
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "374",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar os câmeras que estavam offline",
+        "serviceOrderExternalId": 403
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "376",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Suporte a cliente que não conseguia acesso as câmeras ",
+        "serviceOrderExternalId": 403
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "37",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica e acompanhamento de instalação de internet",
+        "serviceOrderExternalId": 25
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "47",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Substituição de um interruptor e mudança de lugar do sistema de som",
+        "serviceOrderExternalId": 25
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "70",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar os módulos que estavam offiline",
+        "serviceOrderExternalId": 19
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "21",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Automação",
+        "serviceOrderExternalId": 28
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "22",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Separação do Material",
+        "serviceOrderExternalId": 31
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "36",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Manutenção garantia",
+        "serviceOrderExternalId": 31
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "62",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de módulo de automação de um canal",
+        "serviceOrderExternalId": 74
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "235",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 234
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "60",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem e configuração de equipamentos",
+        "serviceOrderExternalId": 64
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "670",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Verifição de dispositivo unifi apresentado funcionamento anormal",
+        "serviceOrderExternalId": 473
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "279",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita técnica para acompanhamento de obra.",
+        "serviceOrderExternalId": 292
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "344",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "AUT|INSTALAÇÃOSubstituição de interruptores",
+        "serviceOrderExternalId": 292
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "364",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "AUT|INSTALAÇÃOInstalação de equipamentos da automação treinamento da cliente",
+        "serviceOrderExternalId": 292
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "558",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "RED|INSTALAÇÃOInstalação de Cloud Gateway",
+        "serviceOrderExternalId": 292
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "561",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "AUT|INSTALAÇÃOInstalação de equipamentos",
+        "serviceOrderExternalId": 292
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "690",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "AAV|INSTALAÇÃOInstalação de equipamentos de som ",
+        "serviceOrderExternalId": 292
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "691",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "RED|INSTALAÇÃOInstalação de equipamentos de som ",
+        "serviceOrderExternalId": 292
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "30",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 34
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "31",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 33
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "32",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 32
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "33",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica ",
+        "serviceOrderExternalId": 34
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "34",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Vistoria técnica e instalação de equipamentos",
+        "serviceOrderExternalId": 34
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "56",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "35 - Instalação e configuração de equipamentos ",
+        "serviceOrderExternalId": 34
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "61",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento",
+        "serviceOrderExternalId": 67
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "170",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento",
+        "serviceOrderExternalId": 185
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "174",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 186
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "241",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 254
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "308",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cliente  não consegue conectar na interntet",
+        "serviceOrderExternalId": 349
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "399",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Correção de controle de acesso que não está funcionando",
+        "serviceOrderExternalId": 415
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "328",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Resolução de persiana que não aciona por meio das teclas",
+        "serviceOrderExternalId": 360
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "355",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Verificação da central de automação que não está funcionado",
+        "serviceOrderExternalId": 383
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "357",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Verificação de circuito fora de funcionamento",
+        "serviceOrderExternalId": 383
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "439",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de manutenção corretiva, automação off-line.",
+        "serviceOrderExternalId": 425
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "85",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem da Infraestrutura CFTV",
+        "serviceOrderExternalId": 125
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "86",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos CFTV",
+        "serviceOrderExternalId": 125
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "93",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica e montagem de infraestrutrura cftv",
+        "serviceOrderExternalId": 123
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "97",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de infraestrutura e passagem de cabos sistema som",
+        "serviceOrderExternalId": 124
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "98",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de infraestrutura e passagem de cabos redes",
+        "serviceOrderExternalId": 128
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "109",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 124
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "122",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 123
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "144",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para vistoria do andamento da obra",
+        "serviceOrderExternalId": 142
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "146",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 124
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "198",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 125
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "236",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos.",
+        "serviceOrderExternalId": 124
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "237",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 123
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "238",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 128
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "239",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 125
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "251",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Gravação a Laser das Teclas",
+        "serviceOrderExternalId": 125
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "28",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Projeto de infra redes e interfone",
+        "serviceOrderExternalId": 38
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "29",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de infraestrutura redes e interfone",
+        "serviceOrderExternalId": 38
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "131",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar os módulos que estavam offiline",
+        "serviceOrderExternalId": 162
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "269",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Troca de módulo em garantia como cortesia e check-up da automação",
+        "serviceOrderExternalId": 329
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "353",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para vistoria e  análise inicial da obra",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "365",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar módulo de automação com funcionamento fora do esperado",
+        "serviceOrderExternalId": 391
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "369",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISTIA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "380",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Entrega de projeto executivo",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "381",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Entrega de diagramas",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "385",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Entrega de Manual do cliente",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "445",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISTIA TÉCNICA|visita técnica para acompanhamento de andamento da obra",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "461",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Entrega de planilha com nome e função dos dispositivos",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "464",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Configuração de dispositivos de automação",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "490",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISTIA TÉCNICA|Visita ténica para acompanhamento de obra",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "508",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISTIA TÉCNICA|Visita técnica para acompanhamento de obra",
+        "serviceOrderExternalId": 375
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "475",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de agenda do time técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "476",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Modificação de teclas dos pulsadores",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "477",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de Relatório Semanal ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "478",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de Relatório Semanal ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "479",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de agenda semanal do time técnico de campo",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "480",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de agenda semanal do time técnico de campo",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "481",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de Relatório Semanal ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "483",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de agenda do time técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "523",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de Relatório Semanal ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "531",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de agenda do time técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "538",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Criação dos procedimentos do Wifeed para configuração de locais e Hotspot",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "548",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de Relatório Semanal",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "563",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de agenda do time técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "579",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega de Relatório Semanal",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "585",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Criação de manual de Configuração e instalação do Home Assistant para o setor técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "605",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de agenda do time técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "606",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Criação de procedimentos de tageamento dos dispositivos",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "608",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Criação de email empreesarial para novo funcionário ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "636",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de agenda do time técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "647",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Solucionar problema de bloqueio de email da hostgator",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "648",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação do Outlook em todas as máquinas",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "671",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização de tarefas em planilha para ser exportada ao Clickup",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "705",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Reuniaão de Alinhamento com o NUNO para alinhamento e organização das tarefas so setor técnico",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "706",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Organização das OS dos clientes com projetos ativos para importação no clickup",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "711",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Criação de treinamento por escrito para uso interno, com o tema controladores de acesso intelbras ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "712",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Criação de POP para padronização dos nomes das Ordens de Serviço",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "720",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Geração de estimativa de cabos para cameras do cliente Camarada Camarão Campo Grande ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "721",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Geração de estimativa de cabos para pontos de rede e access points do cliente Camarada Camarão Campo Grande ",
+        "serviceOrderExternalId": 222
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "68",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e confiuração",
+        "serviceOrderExternalId": 87
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "82",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de equipamentos",
+        "serviceOrderExternalId": 126
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "96",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 135
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "278",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de automação WI-FI",
+        "serviceOrderExternalId": 333
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "300",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Revisão do sistema de automação",
+        "serviceOrderExternalId": 333
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "319",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para solucionar dispositivos de automação que se encontram offline",
+        "serviceOrderExternalId": 353
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "351",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar problema de câmera que ficaram offline",
+        "serviceOrderExternalId": 377
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "436",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Recolocação de câmeras no DVR",
+        "serviceOrderExternalId": 424
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "391",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Configuração de dispositivos de rede ",
+        "serviceOrderExternalId": 388
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "450",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Configuração de dispositivos de automação em bancada",
+        "serviceOrderExternalId": 388
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "299",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de fechadura e câmeras Mibo",
+        "serviceOrderExternalId": 344
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "583",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Instalação de roteadores e configuração de câmeras",
+        "serviceOrderExternalId": 463
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "42",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Manutenção",
+        "serviceOrderExternalId": 49
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "350",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Troca de Interruptor",
+        "serviceOrderExternalId": 372
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "372",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Garantia - telefone fora de linha",
+        "serviceOrderExternalId": 401
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "375",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Correção de erro nos ramais",
+        "serviceOrderExternalId": 408
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "537",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Troca da UCG da cliente",
+        "serviceOrderExternalId": 408
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "540",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Configuração de Cloud Gateway Ultra",
+        "serviceOrderExternalId": 408
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "500",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Vistoria Técnica de Infra",
+        "serviceOrderExternalId": 447
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "104",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 143
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "105",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 145
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "124",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 143
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "138",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 145
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "173",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos.",
+        "serviceOrderExternalId": 143
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "256",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento",
+        "serviceOrderExternalId": 144
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "257",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem da Infraestrutura CFTV",
+        "serviceOrderExternalId": 144
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "258",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos CFTV",
+        "serviceOrderExternalId": 144
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "261",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de alexa e revisão da automação",
+        "serviceOrderExternalId": 144
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "311",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega das tomadas",
+        "serviceOrderExternalId": 340
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "333",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Solucionar problema de sistema de automação offline",
+        "serviceOrderExternalId": 363
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "441",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Suporte remoto a cliente com problema na automação",
+        "serviceOrderExternalId": 426
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "571",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE| VISITA TÉCNICA | Vista para acompanhar a instalação de internet 700 MB e site survey",
+        "serviceOrderExternalId": 456
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "16",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Manutenção",
+        "serviceOrderExternalId": 27
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "176",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Serviço em garantia.",
+        "serviceOrderExternalId": 190
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "66",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica e acompanhamento",
+        "serviceOrderExternalId": 35
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "72",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem e configuração de equipamentos",
+        "serviceOrderExternalId": 59
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "92",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de equipamentos",
+        "serviceOrderExternalId": 133
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "143",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Serviço em garantia.",
+        "serviceOrderExternalId": 169
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "275",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Recolocação de câmera MIBO no DVR",
+        "serviceOrderExternalId": 331
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "582",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Atendimento remoto para as Cameras",
+        "serviceOrderExternalId": 133
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "48",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de Infraestrutura",
+        "serviceOrderExternalId": 46
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "49",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento Estruturado",
+        "serviceOrderExternalId": 46
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "50",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Projeto de Automação",
+        "serviceOrderExternalId": 46
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "51",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de Infraestrutura",
+        "serviceOrderExternalId": 47
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "52",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento Estruturado",
+        "serviceOrderExternalId": 47
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "53",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Projeto de Automação",
+        "serviceOrderExternalId": 47
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "79",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Reparo de garantia",
+        "serviceOrderExternalId": 46
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "297",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "SEG|INSTALAÇÃOInstalação de equipamentos",
+        "serviceOrderExternalId": 209
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "438",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Pesquisa sobre funcionamento de módulos ",
+        "serviceOrderExternalId": 209
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "522",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|PROJETO|Atualização do projeto da casa do caseiro",
+        "serviceOrderExternalId": 209
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "651",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "SEG|PROJETO|Atalização de projeto da casa do caseiro",
+        "serviceOrderExternalId": 209
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "695",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Configuração de dispositivos de automação",
+        "serviceOrderExternalId": 209
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "696",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "RED|CONFIGURAÇÃO|Configuração de dispositivos de redes",
+        "serviceOrderExternalId": 209
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "595",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Mapa de calor e site survey",
+        "serviceOrderExternalId": 269
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "163",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 178
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "177",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento",
+        "serviceOrderExternalId": 191
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "178",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 191
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "179",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Programação e/ou Configuração",
+        "serviceOrderExternalId": 191
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "180",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de Acompanhamento",
+        "serviceOrderExternalId": 191
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "182",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega Técnica",
+        "serviceOrderExternalId": 191
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "183",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento",
+        "serviceOrderExternalId": 192
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "184",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 192
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "185",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Programação e/ou Configuração",
+        "serviceOrderExternalId": 192
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "186",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de Acompanhamento",
+        "serviceOrderExternalId": 192
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "187",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Validação da Sistema",
+        "serviceOrderExternalId": 192
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "188",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega Técnica",
+        "serviceOrderExternalId": 192
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "189",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento",
+        "serviceOrderExternalId": 193
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "190",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 193
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "191",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Programação e/ou Configuração",
+        "serviceOrderExternalId": 193
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "192",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de Acompanhamento",
+        "serviceOrderExternalId": 193
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "193",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Validação da Sistema",
+        "serviceOrderExternalId": 193
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "194",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega Técnica",
+        "serviceOrderExternalId": 193
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "342",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Troca do IR do Quarto",
+        "serviceOrderExternalId": 192
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "466",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Assistência Online - Automação Off-line",
+        "serviceOrderExternalId": 439
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "271",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para passagem de cabos de rede e solucionar problemas no roteador mesh",
+        "serviceOrderExternalId": 313
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "234",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 237
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "248",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 237
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "77",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 117
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "112",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 153
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "128",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 153
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "136",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de caixa de som",
+        "serviceOrderExternalId": 153
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "378",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Desenvolvimento de automação com Home Assistant ",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "389",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Continuação ao desenvolvimento de automação com Home Assistant ",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "393",
+      "issue_code": "UNKNOWN_TYPE_CODE",
+      "details": {
+        "originalName": "AUTO|PROJETO|Continuação ao desenvolvimento de automação com Home Assistant ",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "395",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Continuação ao desenvolvimento de automação com Home Assistant ",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "406",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Desenvolvimento de automação com Home Assistant ",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "417",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Atendimento técnico para solucionar Home Assistant fora de funcionamento ",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "428",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Montagem do escopo da documentação e arquivos do projeto de automação",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "429",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Teste de integração do home assistant",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "435",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Reunião de alinhamento com a VEGA",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "449",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|PROJETO|Estudo de integração do home assistant com controle bluetooth e Infravermelho",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "463",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Suporte remoto e configuração do Home Assistant",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "470",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Suporte local e configuração do home assistant",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "505",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Manutenção preventiva",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "524",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Teste de funcionamento do coordenador zigbee do home assistant",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "550",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Configuração de miniPC",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "555",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|teste de acesso remoto ao mini PC",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "568",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Manutenção corretiva no Home Assistant",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "569",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Configuração do acesso remoto ao home assistant via TAILSCALE",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "591",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "AUT|CONFIGURAÇÃO|Configuração do miniPC para instalação",
+        "serviceOrderExternalId": 409
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "45",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita para orçamento",
+        "serviceOrderExternalId": 56
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "73",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem e configuração de equipamentos",
+        "serviceOrderExternalId": 56
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "101",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 56
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "111",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Passagem de cabos e infraestrutura.",
+        "serviceOrderExternalId": 149
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "125",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica",
+        "serviceOrderExternalId": 148
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "147",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de Infraestrutura",
+        "serviceOrderExternalId": 174
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "148",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento",
+        "serviceOrderExternalId": 174
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "149",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 174
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "150",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Programação e/ou Configuração",
+        "serviceOrderExternalId": 174
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "151",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de Acompanhamento",
+        "serviceOrderExternalId": 174
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "152",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Validação da Sistema",
+        "serviceOrderExternalId": 174
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "153",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega Técnica",
+        "serviceOrderExternalId": 174
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "154",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Montagem de Infraestrutura",
+        "serviceOrderExternalId": 175
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "155",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Cabeamento",
+        "serviceOrderExternalId": 175
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "156",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de Equipamentos",
+        "serviceOrderExternalId": 175
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "157",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Programação e/ou Configuração",
+        "serviceOrderExternalId": 175
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "158",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita de Acompanhamento",
+        "serviceOrderExternalId": 175
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "159",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Validação da Sistema",
+        "serviceOrderExternalId": 175
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "160",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Entrega Técnica",
+        "serviceOrderExternalId": 175
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "196",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 148
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "216",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 150
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "217",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 149
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "218",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 148
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "226",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação e configuração de equipamentos",
+        "serviceOrderExternalId": 225
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "289",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Visita técnica para solucionar problema de carregamento no suporte do tablet e conferencia do sistema de automação",
+        "serviceOrderExternalId": 339
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "584",
+      "issue_code": "UNKNOWN_STAGE",
+      "details": {
+        "originalName": "VTE|VISITA TÉCNICA|Visita técnica para solucionar problema de internet",
+        "serviceOrderExternalId": 465
+      }
+    },
+    {
+      "entity_type": "task",
+      "external_id": "354",
+      "issue_code": "INVALID_TITLE_FORMAT",
+      "details": {
+        "originalName": "Instalação de fechadura e câmeras Mibo",
+        "serviceOrderExternalId": 374
+      }
+    }
+  ]
+}

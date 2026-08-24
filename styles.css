@@ -856,6 +856,23 @@ tr:hover td.sticky-col {
     font-size: .76rem;
 }
 
+.project-data-source {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: .68rem;
+}
+
+.gantt-retry {
+    margin-top: 12px;
+    padding: 7px 14px;
+    border: 1px solid var(--brand);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--brand);
+    cursor: pointer;
+}
+
 .project-gantt-legend {
     display: flex;
     flex-wrap: wrap;
@@ -920,10 +937,19 @@ tr:hover td.sticky-col {
     border-radius: 50%;
 }
 
-.gantt-dot.planned, .gantt-bar.planned { background: #7C8DB5; }
-.gantt-dot.progress, .gantt-bar.progress { background: #5B5BD6; }
+.gantt-dot.planned, .gantt-bar.planned { background: #111827; }
+.gantt-dot.progress, .gantt-bar.progress { background: #F4C430; }
+.gantt-dot.blocked, .gantt-bar.blocked { background: #7C3AED; }
 .gantt-dot.done, .gantt-bar.done { background: #2E9D72; }
 .gantt-dot.late, .gantt-bar.late { background: #D84A4A; }
+
+.gantt-calendar-legend {
+    width: 12px;
+    height: 10px;
+    border: 1px solid rgba(100, 116, 139, .34);
+    border-radius: 2px;
+    background: rgba(100, 116, 139, .22);
+}
 
 .gantt-summary {
     padding: 9px 20px;
@@ -985,6 +1011,23 @@ tr:hover td.sticky-col {
     display: flex;
     overflow: hidden;
 }
+
+.gantt-calendar-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gantt-calendar-highlight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(100, 116, 139, .12);
+}
+
+.gantt-calendar-highlight.holiday { background: rgba(100, 116, 139, .22); }
+.gantt-calendar-highlight.holiday.weekend { background: rgba(71, 85, 105, .27); }
 
 .gantt-months > span:not(.gantt-today) {
     box-sizing: border-box;
@@ -1071,6 +1114,21 @@ tr:hover td.sticky-col {
 .gantt-name-copy { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .gantt-name-copy strong { overflow: hidden; color: #29344A; font-size: .76rem; line-height: 1.15; text-overflow: ellipsis; white-space: nowrap; }
 .gantt-name-copy small { overflow: hidden; color: #8A94A6; font-size: .63rem; line-height: 1.1; text-overflow: ellipsis; white-space: nowrap; }
+.gantt-meta-separator { margin: 0 2px; color: #A5ADBB; }
+.gantt-task-status {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: .58rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.gantt-task-status.planned { background: #111827; }
+.gantt-task-status.progress { background: #F4C430; color: #3D3200; }
+.gantt-task-status.blocked { background: #7C3AED; }
+.gantt-task-status.done { background: #2E9D72; }
+.gantt-task-status.late { background: #D84A4A; }
 .gantt-client .gantt-name-copy strong { color: #1D2940; font-size: .8rem; }
 .gantt-stage .gantt-name-copy strong { font-weight: 650; }
 .gantt-task .gantt-name-copy strong { font-weight: 500; }
@@ -1092,9 +1150,36 @@ tr:hover td.sticky-col {
     box-shadow: 0 2px 5px rgba(28, 39, 60, .16);
     transform: translateY(-50%);
     transition: filter .15s ease, transform .15s ease;
+    z-index: 3;
 }
 
 .gantt-bar:hover { filter: brightness(1.08); transform: translateY(-50%) scaleY(1.18); }
+.gantt-bar:focus-visible { outline: 2px solid #27344D; outline-offset: 2px; }
+
+.gantt-progress-tooltip {
+    position: fixed;
+    z-index: 1000;
+    width: max-content;
+    padding: 6px 9px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 6px;
+    background: #202A3C;
+    box-shadow: 0 5px 16px rgba(18,29,48,.25);
+    color: #FFF;
+    font-size: .66rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(3px) scale(.96);
+    transition: opacity .1s ease, transform .1s ease;
+    white-space: nowrap;
+}
+
+.gantt-progress-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
 .gantt-client .gantt-bar { height: 8px; background: #5847C7; opacity: .88; }
 .gantt-service .gantt-bar { height: 10px; opacity: .86; }
 .gantt-stage .gantt-bar { height: 8px; opacity: .72; }

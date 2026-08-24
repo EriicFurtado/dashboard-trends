@@ -1,0 +1,16 @@
+{
+  "name": "dashboard-trends",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "test:connection": "node scripts/test-connection.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2"
+  }
+}
