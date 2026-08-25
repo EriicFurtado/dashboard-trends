@@ -880,7 +880,7 @@ function ganttCalendarHighlights(timelineStart, totalDays, dayWidth) {
 }
 function ganttCompletion(tasks) {
   if (!tasks || !tasks.length) return 0;
-  const completed = tasks.filter(task => ProjectData.mapEverflowStatus(task.status, task.plannedAt) === 'Finalizado').length;
+  const completed = tasks.filter(task => task.ganttStatus === 'Finalizado').length;
   return Math.round(completed / tasks.length * 100);
 }
 function ganttProgressTooltip() {
@@ -918,14 +918,16 @@ function ganttTaskLabel(task) {
 }
 function ganttStatus(task) {
   const styles = { Planejada:'planned', Andamento:'progress', Bloqueado:'blocked', Finalizado:'done', Atrasada:'late' };
-  return styles[ProjectData.mapEverflowStatus(task.status, task.plannedAt)] || 'planned';
+  return styles[task.ganttStatus] || 'planned';
 }
 function ganttTaskVisible(task) {
-  return ProjectData.mapEverflowStatus(task.status, task.plannedAt) !== null;
+  return task.ganttStatus !== null;
 }
+function ganttTaskStart(task) { return ganttDate(task.startAt || task.plannedAt) || ganttDate(task.orderPlannedStartOn); }
+function ganttTaskEnd(task) { return ganttDate(task.endAt || task.plannedAt) || ganttDate(task.orderPlannedEndOn); }
 function ganttRange(items, fallbackStart, fallbackEnd) {
-  const starts = items.map(x => ganttDate(x.startAt || x.plannedAt)).filter(Boolean);
-  const ends = items.map(x => ganttDate(x.endAt || x.plannedAt)).filter(Boolean);
+  const starts = items.map(ganttTaskStart).filter(Boolean);
+  const ends = items.map(ganttTaskEnd).filter(Boolean);
   return {
     start: starts.length ? new Date(Math.min.apply(null, starts)) : fallbackStart,
     end: ends.length ? new Date(Math.max.apply(null, ends)) : fallbackEnd
@@ -996,7 +998,7 @@ function renderProjectGantt() {
   const allTasks = clients.flatMap(c => c.tasks);
   const categorizedTasks = clients.flatMap(c => c.services.flatMap(s => s.tasks));
   const dates = allProjects.flatMap(p => [ganttDate(p.plannedStartOn || p.registeredOn), ganttDate(p.plannedEndOn)]).concat(
-    allTasks.flatMap(t => [ganttDate(t.startAt || t.plannedAt), ganttDate(t.endAt || t.plannedAt)])
+    allTasks.flatMap(t => [ganttTaskStart(t), ganttTaskEnd(t)])
   ).filter(Boolean);
   if(!dates.length) {
     host.innerHTML = '<div class="gantt-empty">Os projetos carregados não possuem datas para exibir no cronograma.</div>';
@@ -1042,6 +1044,9 @@ function renderProjectGantt() {
     const cr = ganttRange(client.tasks, fallbackStart, fallbackEnd);
     rows.push({ id:clientId, level:0, open:clientOpen, expandable:true, kind:'client', label:client.name, meta:`${client.projects.length} OS · ${client.tasks.length} tarefas`, range:cr, status:'progress', completion:ganttCompletion(client.tasks) });
     if (!clientOpen) return;
+    if (!client.services.length && client.tasks.length) {
+      rows.push({ id:clientId + '-unclassified', level:1, kind:'note', label:'Nenhuma tarefa classificada (tipo de serviço/etapa) para este cliente.' });
+    }
     client.services.forEach((service, si) => {
       const serviceId = clientId + '-service-' + si;
       const serviceOpen = ganttOpenRows.has(serviceId);
@@ -1053,9 +1058,9 @@ function renderProjectGantt() {
         rows.push({ id:stageId, level:2, open:stageOpen, expandable:true, kind:'stage', label:stage.stage, meta:`${stage.tasks.length}`, range:ganttRange(stage.tasks,cr.start,cr.end), status:'planned', completion:ganttCompletion(stage.tasks) });
         if (!stageOpen) return;
         stage.tasks.slice().sort((a,b) => String(a.plannedAt || '').localeCompare(String(b.plannedAt || ''))).forEach(task => {
-          const start = ganttDate(task.startAt || task.plannedAt);
-          const end = ganttDate(task.endAt || task.plannedAt) || start;
-          const mappedStatus = ProjectData.mapEverflowStatus(task.status, task.plannedAt);
+          const start = ganttTaskStart(task);
+          const end = ganttTaskEnd(task) || start;
+          const mappedStatus = task.ganttStatus;
           rows.push({ level:3, kind:'task', label:ganttTaskLabel(task), meta:`OS ${task.serviceOrderExternalId}`, technician:task.technician, mappedStatus, range:{start,end}, status:ganttStatus(task), completion:ganttCompletion([task]), task });
         });
       });
@@ -1070,6 +1075,12 @@ function renderProjectGantt() {
   const calendarHighlights = ganttCalendarHighlights(timelineStart, totalDays, dayWidth);
   const calendarHeaderHighlights = ganttScale === 'day' ? calendarHighlights : '';
   const body = rows.map(row => {
+    if (row.kind === 'note') {
+      return `<div class="gantt-row gantt-note">
+      <div class="gantt-name level-${row.level}"><span class="gantt-task-mark"></span><span class="gantt-name-copy"><small>${ganttEscape(row.label)}</small></span></div>
+      <div class="gantt-track" style="width:${timelineWidth}px"></div>
+    </div>`;
+    }
     const toggle = row.expandable ? `onclick="ganttToggle('${row.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();ganttToggle('${row.id}')}" role="button" tabindex="0" aria-expanded="${row.open}"` : '';
     const arrow = row.expandable ? `<span class="gantt-chevron ${row.open?'open':''}">›</span>` : '<span class="gantt-task-mark"></span>';
     const icon = row.kind === 'client' ? '<span class="gantt-folder">▰</span>' : row.icon ? `<span class="gantt-service-icon">${row.icon}</span>` : '';

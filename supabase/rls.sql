@@ -25,7 +25,7 @@ create policy "public read clients" on public.clients
     exists (
       select 1 from public.service_orders
       where service_orders.client_id = clients.id
-        and service_orders.occurrence = 'Projeto Padrão'
+        and lower(btrim(service_orders.occurrence)) = lower('Projeto Padrão')
     )
   );
 drop policy if exists "authenticated read service types" on public.service_types;
@@ -39,7 +39,7 @@ create policy "public read stages" on public.stages
 drop policy if exists "authenticated read service orders" on public.service_orders;
 drop policy if exists "public read service orders" on public.service_orders;
 create policy "public read service orders" on public.service_orders
-  for select to anon, authenticated using (occurrence = 'Projeto Padrão');
+  for select to anon, authenticated using (lower(btrim(occurrence)) = lower('Projeto Padrão'));
 drop policy if exists "authenticated read tasks" on public.tasks;
 drop policy if exists "public read tasks" on public.tasks;
 create policy "public read tasks" on public.tasks
@@ -47,7 +47,7 @@ create policy "public read tasks" on public.tasks
     exists (
       select 1 from public.service_orders
       where service_orders.id = tasks.service_order_id
-        and service_orders.occurrence = 'Projeto Padrão'
+        and lower(btrim(service_orders.occurrence)) = lower('Projeto Padrão')
     )
   );
 

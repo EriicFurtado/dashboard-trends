@@ -18,8 +18,8 @@ create table if not exists public.clients (
   name_key text generated always as (lower(btrim(name))) stored,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
-  constraint clients_external_id_key unique (external_id),
-  constraint clients_name_key_key unique (name_key)
+  constraint clients_external_id_key unique (external_id)
+  -- name_key is for search/display only; different CRM clients may share a name.
 );
 
 create table if not exists public.service_types (
@@ -133,5 +133,7 @@ insert into public.stages (name, sort_order) values
   ('Pré-Configuração', 4),
   ('Instalação', 5),
   ('Configuração Final', 6),
-  ('Treinamento', 7)
+  ('Treinamento', 7),
+  ('Projeto', 8),
+  ('Visita Técnica', 9)
 on conflict (name) do update set sort_order = excluded.sort_order;

@@ -6,11 +6,8 @@ Dashboard web para acompanhamento de ordens de serviço, tarefas e projetos com 
 
 - Git
 - Node.js 18 ou superior
-- npm (incluído com o Node.js)
-- Um projeto Supabase com o schema de `supabase/schema.sql` e as políticas de `supabase/rls.sql`
-- A URL e a chave publicável (`publishable`/`anon`) desse projeto
-
-Nunca coloque uma chave secreta ou `service_role` no frontend ou em arquivos versionados.
+- npm
+- Projeto Supabase configurado com `supabase/schema.sql`
 
 ## Setup local
 
@@ -18,70 +15,66 @@ Nunca coloque uma chave secreta ou `service_role` no frontend ou em arquivos ver
 git clone <URL-DO-REPOSITORIO>
 cd dashboard-trends
 npm ci
-```
-
-Copie o arquivo de exemplo para `.env`:
-
-```bash
-# macOS/Linux
 cp .env.example .env
-
-# Windows PowerShell
-Copy-Item .env.example .env
 ```
 
-Edite `.env` e substitua os placeholders:
+No Windows PowerShell, use `Copy-Item .env.example .env`. Preencha o `.env`:
 
 ```dotenv
-SUPABASE_URL=https://perguntar_para_o_luís
-SUPABASE_PUBLISHABLE_KEY=perguntar_para_o_luis
+SUPABASE_URL=https://seu-projeto.supabase.co
+SUPABASE_PUBLISHABLE_KEY=sb_publishable_sua-chave-aqui
+SUPABASE_SECRET_KEY=sb_secret_sua-chave-de-servidor-aqui
+EVERFLOW_TOKEN=seu-token-everflow-aqui
 ```
 
-Inicie o projeto com um único comando:
+Nunca exponha `SUPABASE_SECRET_KEY` ou `EVERFLOW_TOKEN` no navegador ou no Git.
+
+## Rodar o frontend
 
 ```bash
 npm run dev
 ```
 
-Abra [http://localhost:8000](http://localhost:8000). O servidor gera a configuração pública do navegador a partir do `.env`; não edite `supabase.js` com credenciais.
+Abra <http://localhost:8000>.
 
-## Testar a conexão com o Supabase
-
-Com o `.env` preenchido, execute:
+## Testar conexão
 
 ```bash
 npm run test:connection
 ```
 
-O resultado esperado é:
+## Sincronizar Everflow → Supabase
 
-```text
-Conectado com sucesso ao Supabase (tabela service_orders acessível).
+Aplique `supabase/schema.sql` e depois `supabase/migrations/20260824_allow_duplicate_client_names.sql` no Supabase. Em seguida execute:
+
+```bash
+npm run sync:everflow
 ```
 
-Se o teste falhar, confira a URL, a chave publicável, a existência da tabela `service_orders` e as políticas de leitura (RLS).
+O sincronizador busca as OS desde janeiro de 2024, pagina os resultados, consulta tarefas relacionadas via `IdsOrdensServico`, normaliza nomes no formato `TIPO|ETAPA|NOME` e faz upsert idempotente em `clients`, `service_orders`, `tasks` e `migration_issues`.
 
-## Testes locais
+Para o pulling recorrente do mês atual até seis meses à frente, agende externamente a cada 15 minutos:
+
+```bash
+npm run sync:everflow:window
+```
+
+Esse modo filtra por `DataPrevistaInicioMaiorOuIgualA` e `DataPrevistaInicioMenorOuIgualA`. O agendador pode ser o n8n, Task Scheduler do Windows, cron ou outro serviço; o script não mantém um processo permanente.
+
+## Testes
 
 ```bash
 npm test
 ```
 
-## Estrutura essencial
-
-- `Dashboard_Interativo_OS.html`, `styles.css` e `script.js`: interface principal
-- `projects.js`: consultas e transformação dos dados de projetos
-- `supabase.js`: criação do cliente Supabase no navegador
-- `server.js`: servidor local e injeção segura da configuração pública
-- `supabase/`: schema e políticas RLS necessários para preparar o banco
-- `tests/`: testes automatizados
-
 ## Variáveis de ambiente
 
 | Variável | Obrigatória | Uso |
 | --- | --- | --- |
-| `SUPABASE_URL` | Sim | URL pública do projeto Supabase |
-| `SUPABASE_PUBLISHABLE_KEY` | Sim | Chave pública usada pelo navegador e pelo teste de conexão |
-| `PORT` | Não | Porta do servidor local; padrão `8000` |
+| `SUPABASE_URL` | Sim | URL do projeto Supabase |
+| `SUPABASE_PUBLISHABLE_KEY` | Sim para o frontend | Chave pública do navegador |
+| `SUPABASE_SECRET_KEY` | Sim para sincronização | Chave server-side para escrita |
+| `EVERFLOW_TOKEN` | Sim para sincronização | Token da API Flow/Everflow |
+| `PORT` | Não | Porta local; padrão `8000` |
 
-O `.env` é ignorado pelo Git. Somente `.env.example`, com placeholders, deve ser versionado.
+O `.env` é ignorado pelo Git; somente `.env.example` com placeholders deve ser versionado.

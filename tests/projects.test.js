@@ -43,10 +43,10 @@ test('mapeia os status do Everflow para os status do Gantt', () => {
   const today = new Date('2026-08-20T12:00:00');
   const future = '2026-08-21';
   const cases = [
-    ['Planejado', 'Planejada'], ['Planejada', 'Planejada'],
+    ['Planejado', 'Planejada'], ['Planejada', 'Planejada'], ['Agendado', 'Planejada'],
     ['Agenda', 'Planejada'], ['Agendada', 'Planejada'],
-    ['Em deslocamento', 'Planejada'], ['Em execução', 'Andamento'],
-    ['Pause', 'Bloqueado'], ['Pausa', 'Bloqueado'],
+    ['Em deslocamento', 'Planejada'], ['Em execução', 'Andamento'], ['Em Serviço', 'Andamento'],
+    ['Pause', 'Bloqueado'], ['Pausa', 'Bloqueado'], ['Pausado', 'Bloqueado'],
     ['Impedida', 'Bloqueado'], ['Finalizada', 'Finalizado']
   ];
   for (const [everflow, gantt] of cases) {
@@ -155,7 +155,7 @@ test('determina a sincronização mais recente sem criar datas artificiais', () 
   assert.equal(maxIsoDate([null, '']), null);
 });
 
-test('consulta as tabelas necessárias e filtra OS de Projeto Padrão', async () => {
+test('consulta as tabelas necessárias e delega o filtro de Projeto Padrão à RLS (case/acento/espaço-insensível)', async () => {
   const calls = [];
   const rows = {
     service_orders: [order('os-1', 123)],
@@ -180,7 +180,40 @@ test('consulta as tabelas necessárias e filtra OS de Projeto Padrão', async ()
   assert.equal(result.serviceOrders.length, 1);
   assert.deepEqual(calls.map((call) => call.table), ['service_orders', 'tasks', 'service_types', 'stages']);
   assert.ok(calls[0].columns.includes('client:clients!inner'));
-  assert.deepEqual(calls[0].filters, [['occurrence', 'Projeto Padrão']]);
+  assert.deepEqual(calls[0].filters, []);
+});
+
+test('tarefa carrega as datas da OS para servir de fallback no Gantt', () => {
+  const result = transform([order('os-1', 123)], [task(1, 'os-1')]);
+  const transformed = result.tasks[0];
+  assert.equal(transformed.orderPlannedStartOn, '2026-08-10');
+  assert.equal(transformed.orderPlannedEndOn, '2026-09-10');
+});
+
+test('tarefa sem data própria calcula o status Gantt com a previsão final da OS', () => {
+  const result = transform([order('os-1', 123)], [task(1, 'os-1', {
+    status: 'Planejando', planned_on: null, started_on: null, ended_on: null
+  })]);
+  assert.equal(result.tasks[0].ganttStatus, mapEverflowStatus('Planejando', '2026-09-10'));
+});
+
+test('tarefa cancelada chega ao frontend marcada para exclusão do Gantt', () => {
+  const result = transform([order('os-1', 123)], [task(1, 'os-1', { status: 'Cancelada' })]);
+  assert.equal(result.tasks[0].ganttStatus, null);
+  assert.equal(result.projects[0].services[0].tasks[0].ganttStatus, null);
+});
+
+test('tarefa atrasada chega ao frontend com status visual já calculado', () => {
+  const result = transform([order('os-1', 123)], [task(1, 'os-1', {
+    status: 'Em execução', planned_on: '2020-01-01', started_on: null, ended_on: null
+  })]);
+  assert.equal(result.tasks[0].ganttStatus, 'Atrasada');
+});
+
+test('o renderer do Gantt consome o status centralizado sem recalculá-lo', () => {
+  const source = require('node:fs').readFileSync(require.resolve('../script'), 'utf8');
+  assert.doesNotMatch(source, /ProjectData\.mapEverflowStatus/);
+  assert.match(source, /task\.ganttStatus/);
 });
 
 test('o transformador não contém fallback por categoria, regex ou nome', () => {

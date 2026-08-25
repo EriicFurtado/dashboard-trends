@@ -13,12 +13,12 @@
   }
 
   const EVERFLOW_TO_GANTT_STATUS = Object.freeze({
-    planejado: 'Planejada',
-    planejada: 'Planejada',
-    agenda: 'Planejada',
+    agendado: 'Planejada',
     agendada: 'Planejada',
-    'em deslocamento': 'Planejada',
+    planejada: 'Planejada',
+    'em servico': 'Andamento',
     'em execucao': 'Andamento',
+    pausado: 'Bloqueado',
     pause: 'Bloqueado',
     pausa: 'Bloqueado',
     impedida: 'Bloqueado',
@@ -66,8 +66,9 @@
     const [serviceOrders, tasks, serviceTypes, stages] = await Promise.all([
       fetchAll(() => client
         .from('service_orders')
+        // occurrence is filtered by RLS (lower(btrim(occurrence)) = lower('Projeto Padrão')),
+        // not here, so that case/accent/whitespace variants are matched the same way everywhere.
         .select('id,external_id,client_id,occurrence,operational_service_type,deadline_level,status,registered_on,planned_start_on,planned_end_on,updated_at,client:clients!inner(id,name,updated_at)')
-        .eq('occurrence', 'Projeto Padrão')
         .order('external_id', { ascending: true })),
       fetchAll(() => client
         .from('tasks')
@@ -137,8 +138,17 @@
         technician: task.technician,
         serviceOrderId: order.id,
         serviceOrderExternalId: order.external_id,
-        updatedAt: task.updated_at
+        orderPlannedStartOn: order.planned_start_on,
+        orderPlannedEndOn: order.planned_end_on,
+        updatedAt: task.updated_at,
+        ganttStatus: null
       };
+      // The Gantt status must use the same effective deadline as the rendered
+      // bar: the task date first, then the service-order deadline as fallback.
+      transformed.ganttStatus = mapEverflowStatus(
+        transformed.status,
+        transformed.endAt || transformed.plannedAt || transformed.orderPlannedEndOn
+      );
       const client = clientById.get(order.client_id);
       client.tasks.push(transformed);
       transformedTasks.push(transformed);
@@ -150,7 +160,7 @@
 
     for (const client of clientById.values()) {
       client.services = serviceTypes.map((type) => {
-        
+
         const serviceTasks = client.tasks.filter((task) => task.typeCode === type.code && stageByName.has(task.stage));
         return {
           typeCode: type.code,
