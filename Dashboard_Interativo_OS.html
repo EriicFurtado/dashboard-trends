@@ -252,6 +252,7 @@
         <span class="project-gantt-eyebrow">CRONOGRAMA OPERACIONAL</span>
         <h3>Projetos ativos</h3>
         <p>Expanda cliente, serviço e etapa para visualizar as tarefas e seus prazos.</p>
+        <small id="pDataSource" class="project-data-source">Dados do Supabase · carregando...</small>
       </div>
       <div class="project-gantt-actions">
         <div class="gantt-scale-control" aria-label="Escala do cronograma">
@@ -261,10 +262,12 @@
           <button type="button" data-gantt-scale="day" onclick="setGanttScale(this)">Dia</button>
         </div>
         <div class="project-gantt-legend" aria-label="Legenda do Gantt">
-          <span><i class="gantt-dot planned"></i>Planejado</span>
-          <span><i class="gantt-dot progress"></i>Em andamento</span>
+          <span><i class="gantt-dot planned"></i>Planejada</span>
+          <span><i class="gantt-dot progress"></i>Andamento</span>
+          <span><i class="gantt-dot blocked"></i>Bloqueado</span>
           <span><i class="gantt-dot done"></i>Finalizado</span>
           <span><i class="gantt-dot late"></i>Atrasado</span>
+          <span><i class="gantt-calendar-legend"></i>Fim de semana / feriado</span>
         </div>
       </div>
     </div>
@@ -275,6 +278,10 @@
 
 <div class="footer"><strong>Trends Automation</strong> · Dashboard OS + Tarefas · Responsáveis e auxiliares · 06/08/2026 17:56</div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="supabase.js"></script>
+<script src="projects.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
