@@ -1749,3 +1749,9 @@ initOS(); applyOS();
 initTasks(); applyTasks();
 initFast(); applyFast();
 loadProjectData();
+
+// Keep an already-open dashboard aligned with the five-minute backend poll.
+// Visibility prevents needless Supabase reads in background tabs.
+setInterval(function refreshProjectsAfterPolling() {
+  if (document.visibilityState === 'visible' && projectLoadState !== 'loading') loadProjectData();
+}, 5 * 60 * 1000);

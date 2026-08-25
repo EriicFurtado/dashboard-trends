@@ -10,7 +10,9 @@
     "test": "node --test tests/*.test.js",
     "test:connection": "node scripts/test-connection.js",
     "sync:everflow": "node scripts/sync-everflow.js",
-    "sync:everflow:window": "node scripts/sync-everflow.js --window"
+    "sync:everflow:window": "node scripts/sync-everflow.js --window",
+    "poll:everflow:once": "node scripts/poll-everflow.js --once",
+    "poll:everflow": "node scripts/poll-everflow.js"
   },
   "dependencies": {
     "dotenv": "^17.2.2"

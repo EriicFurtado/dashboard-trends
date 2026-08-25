@@ -153,6 +153,14 @@ async function supabaseRequest(table, body, conflict) {
   });
 }
 
+async function upsertProtectedTask(payload) {
+  return requestJson(`${supabaseBase}/rpc/upsert_polled_task`, {
+    method: 'POST',
+    headers: { ...supabaseHeaders, 'Content-Type': 'application/json', Prefer: 'return=representation' },
+    body: JSON.stringify({ payload })
+  });
+}
+
 async function syncMonth(month) {
   let pageIndex = 0;
   let orders = [];
@@ -226,7 +234,29 @@ async function syncMonth(month) {
       technician: nullable(task.tecnicoResponsavel?.nome)
     });
   }
-  for (let index = 0; index < taskRows.length; index += 100) await supabaseRequest('tasks', taskRows.slice(index, index + 100), 'external_id');
+  for (const row of taskRows) {
+    await upsertProtectedTask({
+      ...row,
+      raw_classification: {
+        type_code: row.type_code,
+        stage: row.stage,
+        original_category: null,
+        occurrence: null,
+        management_type: null
+      },
+      normalized: {
+        type_code: row.type_code,
+        stage: row.stage,
+        original_category: null,
+        occurrence: null,
+        management_type: null
+      },
+      validation_passed: Boolean(row.type_code && row.stage),
+      validation_errors: row.type_code && row.stage ? [] : ['LEGACY_TITLE_NORMALIZATION_FAILED'],
+      classification_source: 'everflow_raw',
+      everflow_raw_hash: null
+    });
+  }
   for (let index = 0; index < issues.length; index += 100) await supabaseRequest('migration_issues', issues.slice(index, index + 100), 'entity_type,external_id,issue_code');
   return { month, orders: orders.length, tasks: taskRows.length, issues: issues.length };
 }
