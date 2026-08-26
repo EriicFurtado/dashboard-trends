@@ -153,6 +153,21 @@ async function supabaseRequest(table, body, conflict) {
   });
 }
 
+async function fetchKnownServiceOrders() {
+  const rows = [];
+  for (let offset = 0; ; offset += 1000) {
+    const query = queryString({
+      select: 'id,external_id',
+      order: 'external_id.asc',
+      offset,
+      limit: 1000
+    });
+    const page = await requestJson(`${supabaseBase}/service_orders?${query}`, { headers: supabaseHeaders });
+    rows.push(...(page || []));
+    if (!page || page.length < 1000) return rows;
+  }
+}
+
 async function upsertProtectedTask(payload) {
   return requestJson(`${supabaseBase}/rpc/upsert_polled_task`, {
     method: 'POST',
@@ -161,7 +176,7 @@ async function upsertProtectedTask(payload) {
   });
 }
 
-async function syncMonth(month) {
+async function syncMonth(month, includeKnownOrders = false) {
   let pageIndex = 0;
   let orders = [];
   while (true) {
@@ -190,10 +205,6 @@ async function syncMonth(month) {
   }
   orders = validOrders;
 
-  let tasks = [];
-  for (let index = 0; index < orders.length; index += TASK_BATCH_SIZE) {
-    tasks.push(...await fetchTasks(orders.slice(index, index + TASK_BATCH_SIZE).map((order) => order.id)));
-  }
   const clients = new Map();
   for (const order of orders) {
     const externalId = clientExternalId(order);
@@ -220,7 +231,23 @@ async function syncMonth(month) {
   }));
   const savedOrders = [];
   for (let index = 0; index < orderRows.length; index += 100) savedOrders.push(...await supabaseRequest('service_orders', orderRows.slice(index, index + 100), 'external_id'));
-  const orderIds = new Map(savedOrders.map((order) => [Number(order.external_id), order.id]));
+  const knownOrders = includeKnownOrders ? await fetchKnownServiceOrders() : [];
+  const orderIds = new Map(knownOrders.map((order) => [Number(order.external_id), order.id]));
+  for (const order of savedOrders) orderIds.set(Number(order.external_id), order.id);
+
+  // Tasks can be created on an older service order that no longer belongs to
+  // the current planned-start window. Poll every order already known by the
+  // database, plus any order discovered in this window, so those tasks are not
+  // silently missed.
+  const taskOrderExternalIds = [...new Set([
+    ...orderIds.keys(),
+    ...orders.map((order) => Number(order.id))
+  ])].filter(Number.isFinite);
+  let tasks = [];
+  for (let index = 0; index < taskOrderExternalIds.length; index += TASK_BATCH_SIZE) {
+    tasks.push(...await fetchTasks(taskOrderExternalIds.slice(index, index + TASK_BATCH_SIZE)));
+  }
+  tasks = [...new Map(tasks.map((task) => [Number(task.id), task])).values()];
 
   const taskRows = [];
   for (const task of tasks) {
@@ -258,14 +285,22 @@ async function syncMonth(month) {
     });
   }
   for (let index = 0; index < issues.length; index += 100) await supabaseRequest('migration_issues', issues.slice(index, index + 100), 'entity_type,external_id,issue_code');
-  return { month, orders: orders.length, tasks: taskRows.length, issues: issues.length };
+  return {
+    month,
+    orders: orders.length,
+    task_orders_polled: taskOrderExternalIds.length,
+    tasks: taskRows.length,
+    issues: issues.length
+  };
 }
 
 async function main() {
   const results = [];
   if (syncScope === 'window') {
     const current = new Date().toISOString().slice(0, 7);
-    for (let offset = 0, month = current; offset <= 6; offset += 1, month = monthAfter(month)) results.push(await syncMonth(month));
+    for (let offset = 0, month = current; offset <= 6; offset += 1, month = monthAfter(month)) {
+      results.push(await syncMonth(month, offset === 0));
+    }
   } else {
     for (let month = START_MONTH; month <= endMonth; month = monthAfter(month)) results.push(await syncMonth(month));
   }
